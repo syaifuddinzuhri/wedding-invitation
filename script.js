@@ -16,14 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // AOS.init();
 
   btnOpen.addEventListener("click", function () {
-    // openBox.classList.add("hidden");
-    // // Show the invitation box after the transition
-    // setTimeout(function () {
-    //   openBox.style.display = "none";
-    //   invitationBox.classList.add("show");
-    //   AOS.init();
-    //   // audio.play();
-    // }, 500); // Match the duration of the CSS transition
+    openBox.classList.add("hidden");
+
+    // Show the invitation box after the transition
+    setTimeout(function () {
+      openBox.style.display = "none";
+      invitationBox.classList.add("show");
+      AOS.init();
+      // audio.play();
+    }, 500); // Match the duration of the CSS transition
   });
 
   const countdownDate = new Date(2024, 5, 14, 13, 0, 0).getTime();
