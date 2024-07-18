@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  var animation = lottie.loadAnimation({
+    container: document.getElementById("lottie-animation"), // the dom element that will contain the animation
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "./cincin.json",
+  });
+
   const btnOpen = document.querySelector(".btn-open");
   const openBox = document.querySelector(".open-box");
   const audio = document.getElementById("audio");

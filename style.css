@@ -18,17 +18,20 @@ body {
 }
 
 .open-box {
-  background-color: #3f6f8f;
   width: 100%;
   min-height: 100vh;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   overflow-x: hidden;
   transition: transform 0.5s ease, opacity 0.5s ease;
   position: relative;
+  background-image: url("./images/bg-1.jpg");
+  background-size: cover; /* Makes sure the background image covers the entire area */
+  background-position: center; /* Centers the background image */
 }
 
 .open-box h1 {
@@ -36,8 +39,9 @@ body {
 }
 
 .footer-open {
-  position: absolute;
+  position: relative;
   bottom: 0;
+  z-index: 99999;
 }
 
 .manten-1 {
@@ -134,12 +138,12 @@ body {
 }
 
 .text-light {
-  color: #3f6f8f;
+  color: #6b1307;
 }
 
 .countdown {
   display: flex;
-  color: #3f6f8f;
+  color: #6b1307;
 }
 
 .timer {
@@ -212,16 +216,16 @@ body {
   font-family: "Roboto Slab", Sans-serif;
   font-size: 13px;
   font-weight: 600;
-  fill: #3f6f8f;
-  color: #3f6f8f;
+  fill: #6b1307;
+  color: #6b1307;
   background-color: transparent;
   background-image: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
   border-style: double;
   border-width: 1px 1px 1px 1px;
-  border-color: #3f6f8f;
+  border-color: #6b1307;
   border-radius: 27px 27px 27px 27px;
   box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
-  padding: 15px 25px 15px 25px;
+  padding: 10px 20px 10px 20px;
   cursor: pointer;
   z-index: 1;
 }
@@ -231,13 +235,13 @@ body {
   font-family: "Roboto Slab", Sans-serif;
   font-size: 13px;
   font-weight: 600;
-  fill: #3f6f8f;
-  color: #3f6f8f;
+  fill: #6b1307;
+  color: #6b1307;
   background-color: transparent;
   background-image: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
   border-style: double;
   border-width: 1px 1px 1px 1px;
-  border-color: #3f6f8f;
+  border-color: #6b1307;
   border-radius: 27px 27px 27px 27px;
   box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
   padding: 15px 25px 15px 25px;
@@ -261,13 +265,13 @@ body {
   font-family: "Roboto Slab", Sans-serif;
   font-size: 12px;
   font-weight: 600;
-  fill: #3f6f8f;
-  color: #3f6f8f;
+  fill: #6b1307;
+  color: #6b1307;
   background-color: transparent;
   background-image: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
   border-style: double;
   border-width: 1px 1px 1px 1px;
-  border-color: #3f6f8f;
+  border-color: #6b1307;
   border-radius: 27px 27px 27px 27px;
   box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
