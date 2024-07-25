@@ -291,9 +291,9 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 25px;
-  height: 25px;
-  border: 2px dashed #6b1307;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #6b1307;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -303,7 +303,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.circle-audio-player.playing {
+/* .circle-audio-player.playing {
   animation: spin 5s linear infinite;
 }
 
@@ -314,20 +314,20 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .controls {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #playPauseBtn {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: #6b1307;
   border-radius: 50%;
@@ -337,12 +337,87 @@ body {
 
 button.play::before {
   content: "▶";
-  font-size: 11px;
+  font-size: 13px;
   color: #fff;
 }
 
 button.pause::before {
   content: "❚❚";
-  font-size: 11px;
+  font-size: 14px;
   color: #fff;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #feeaea;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  position: relative; /* For absolute positioning of the pseudo-element */
+  overflow: hidden;
+}
+
+.menu-item:last-child {
+  margin-right: 0px;
+}
+.menu-item.inactive {
+  background-color: transparent !important;
+}
+.menu-item.inactive svg {
+  color: #000 !important;
+}
+.menu-item.inactive .menu-item__text {
+  min-width: 0px;
+  opacity: 0;
+  font-size: 0px;
+}
+.menu-item.active {
+  background-color: #ffffff;
+  color: #6b1307;
+  transform: scale(1.1);
+}
+.menu-item__text {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+.menu-item__icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 0px;
+}
+.menu-item__icon svg {
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }

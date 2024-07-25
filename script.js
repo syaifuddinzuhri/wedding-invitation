@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let menuItems = document.querySelectorAll(".menu-item");
+
+  menuItems.forEach(function (menuItem) {
+    menuItem.addEventListener("click", function () {
+      // Add the 'inactive' class to all menu items
+      menuItems.forEach(function (item) {
+        item.classList.add("inactive");
+      });
+
+      // Remove the 'inactive' class from the clicked menu item
+      this.classList.remove("inactive");
+      this.classList.add("active");
+    });
+  });
+
   var animation = lottie.loadAnimation({
     container: document.getElementById("lottie-animation"), // the dom element that will contain the animation
     renderer: "svg",
@@ -20,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.play();
       playPauseBtn.classList.remove("play");
       playPauseBtn.classList.add("pause");
-      audioPlayer.classList.add("playing");
+      // audioPlayer.classList.add("playing");
     } else {
       audio.pause();
       playPauseBtn.classList.remove("pause");
       playPauseBtn.classList.add("play");
-      audioPlayer.classList.remove("playing");
+      // audioPlayer.classList.remove("playing");
     }
   });
   // openBox.style.display = "none";
@@ -41,7 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
       invitationBox.classList.add("show");
       AOS.init();
       audio.play();
-      audioPlayer.classList.add("playing");
+      playPauseBtn.classList.remove("play");
+      playPauseBtn.classList.add("pause");
+      // audioPlayer.classList.add("playing");
     }, 500); // Match the duration of the CSS transition
   });
 
