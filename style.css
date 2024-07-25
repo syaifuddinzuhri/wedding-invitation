@@ -289,7 +289,7 @@ body {
 
 .circle-audio-player {
   position: absolute;
-  bottom: 10px;
+  bottom: 100px;
   right: 10px;
   width: 30px;
   height: 30px;
@@ -367,6 +367,9 @@ button.pause::before {
 }
 
 .menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
   margin-right: 20px;
   padding: 10px;
@@ -391,13 +394,14 @@ button.pause::before {
   font-size: 0px;
 }
 .menu-item.active {
-  background-color: #ffffff;
+  background-color: #fffefe;
   color: #6b1307;
   transform: scale(1.1);
 }
 .menu-item__text {
   text-align: center;
   font-size: 10px;
+  padding-top: 10px;
   font-weight: 600;
   transition: opacity 0.3s ease;
 }
