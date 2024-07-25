@@ -286,3 +286,63 @@ body {
     max-width: none;
   }
 }
+
+.circle-audio-player {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  border: 2px dashed #6b1307;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.circle-audio-player.playing {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.controls {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playPauseBtn {
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: #6b1307;
+  border-radius: 50%;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+}
+
+button.play::before {
+  content: "▶";
+  font-size: 11px;
+  color: #fff;
+}
+
+button.pause::before {
+  content: "❚❚";
+  font-size: 11px;
+  color: #fff;
+}

@@ -11,6 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const openBox = document.querySelector(".open-box");
   const audio = document.getElementById("audio");
   const invitationBox = document.querySelector(".invitation-box");
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  const seekSlider = document.getElementById("seekSlider");
+  const audioPlayer = document.querySelector(".circle-audio-player");
+
+  playPauseBtn.addEventListener("click", function () {
+    if (audio.paused) {
+      audio.play();
+      playPauseBtn.classList.remove("play");
+      playPauseBtn.classList.add("pause");
+      audioPlayer.classList.add("playing");
+    } else {
+      audio.pause();
+      playPauseBtn.classList.remove("pause");
+      playPauseBtn.classList.add("play");
+      audioPlayer.classList.remove("playing");
+    }
+  });
   // openBox.style.display = "none";
   // invitationBox.classList.add("show");
   // AOS.init();
@@ -23,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
       openBox.style.display = "none";
       invitationBox.classList.add("show");
       AOS.init();
-      // audio.play();
+      audio.play();
+      audioPlayer.classList.add("playing");
     }, 500); // Match the duration of the CSS transition
   });
 
